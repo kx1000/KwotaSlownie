@@ -15,7 +15,11 @@ class KwotaSlownie {
     const FIVE_GROSZES = 'groszy';
 
     /**
-     * ['równo jeden','dwa lub więcej','pięć lub więcej']
+     * Zwraca prawidłowo odmieniony wyraz
+     *
+     * @param $wordsArray ['równo jeden','dwa lub więcej','pięć lub więcej']
+     * @param $amountInt
+     * @return string
      */
     private function getWordVariety($wordsArray, $amountInt)
     {
@@ -39,6 +43,7 @@ class KwotaSlownie {
      * @param $amount
      * @param bool $isComma (czy ma się pojawić przecinek między złotówkami i groszami, np dwa złote, 2 grosze)
      * @param string $mode ('ZLOTY' np. 2.02 lub 'GROSZ' np. 202)
+     * @return string
      */
     public function getAmountInWords($amount, $isComma = true, $mode = self::MODE_ZLOTY)
     {
