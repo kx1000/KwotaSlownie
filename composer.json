@@ -2,6 +2,7 @@
     "name": "kx1000/kwota-slownie",
     "description": "Kwota słownie",
     "version": "0.0.2",
+    "license": "MIT",
     "require": {
         "php": ">=5.6",
         "ext-intl" : "*"
