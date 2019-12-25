@@ -1,0 +1,22 @@
+{
+    "name": "kacpi/kwota-slownie",
+    "description": "Kwota słownie",
+    "version": "0.0.1",
+    "require": {
+        "php": ">=5.6",
+        "ext-intl" : "*"
+    },
+    "authors": [
+        {
+            "name": "Kacper Rogula",
+            "email": "kacper.rogula@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+
+    "autoload": {
+        "psr-4": {
+            "KwotaSlownie\\": "src/"
+        }
+    } 
+}
