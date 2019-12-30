@@ -21,7 +21,7 @@ class KwotaSlownie {
      * @param $amountInt
      * @return string
      */
-    private function getWordVariety($wordsArray, $amountInt)
+    private function selectWordVariety($wordsArray, $amountInt)
     {
         $unity = (int) substr($amountInt,-1); // jedności
         $rest = $amountInt % 100;
@@ -45,7 +45,7 @@ class KwotaSlownie {
      * @param string $mode ('ZLOTY' np. 2.02 lub 'GROSZ' np. 202)
      * @return string
      */
-    public function getAmountInWords($amount, $isComma = true, $mode = self::MODE_ZLOTY)
+    public function transformToWords($amount, $isComma = true, $mode = self::MODE_ZLOTY)
     {
         if (self::MODE_GROSZ === $mode) {
             $amount = $amount / 100;
@@ -57,9 +57,9 @@ class KwotaSlownie {
         $zlotys = $numbers[0];
         $groszes = strlen($numbers[1]) === 1 ? $numbers[1] * 10 : $numbers[1]; // naprawia błąd w przypadku kwoty 2.2 (jako 2 grosze, a nie 20)
 
-        $output = "{$numberFormatter->format($zlotys)} {$this->getWordVariety([self::ONE_ZLOTY, self::TWO_ZLOTYS, self::FIVE_ZLOTYS], $zlotys)}";
+        $output = "{$numberFormatter->format($zlotys)} {$this->selectWordVariety([self::ONE_ZLOTY, self::TWO_ZLOTYS, self::FIVE_ZLOTYS], $zlotys)}";
         $output .= $isComma ? ", " : " ";
-        $output .= "{$numberFormatter->format($groszes)} {$this->getWordVariety([self::ONE_GROSZ, self::TWO_GROSZES, self::FIVE_GROSZES], $groszes)}";
+        $output .= "{$numberFormatter->format($groszes)} {$this->selectWordVariety([self::ONE_GROSZ, self::TWO_GROSZES, self::FIVE_GROSZES], $groszes)}";
         return  $output;
     }
 }
