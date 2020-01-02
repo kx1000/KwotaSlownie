@@ -14,12 +14,8 @@ Upewnij się, że autoload jest dodany.
 ```
 use KwotaSlownie\KwotaSlownie;
 
-
-// Inicjalizacja biblioteki
-$kwotaSlownie = new KwotaSlownie\KwotaSlownie();  
-
 // Przekształcenie kwoty na słowa  
-echo $kwotaSlownie->transformToWords(2.02); // "dwa złote, dwa grosze"
-echo $kwotaSlownie->transformToWords(2.02, false); // "dwa złote dwa grosze" (bez przecinka)
-echo $kwotaSlownie->transformToWords(202, true, 'GROSZ'); // "dwa złote, dwa grosze" (kwota wyrażona w groszach) 
+echo new KwotaSlownie(2.02); // "dwa złote, dwa grosze"
+echo new KwotaSlownie(2.02, false); // "dwa złote dwa grosze" (bez przecinka)
+echo new KwotaSlownie(202, true, 'GROSZ'); // "dwa złote, dwa grosze" (kwota wyrażona w groszach)
 ```
