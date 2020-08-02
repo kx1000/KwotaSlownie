@@ -56,7 +56,11 @@ class KwotaSlownie {
         $amountString = (string) round($amount, 2);
         $numbers = explode('.', $amountString);
         $zlotys = $numbers[0];
-        $groszes = strlen($numbers[1]) === 1 ? $numbers[1] * 10 : $numbers[1]; // naprawia błąd w przypadku kwoty 2.2 (jako 2 grosze, a nie 20)
+        $groszes = 0;
+
+        if (isset($numbers[1])) {
+            $groszes = strlen($numbers[1]) === 1 ? $numbers[1] * 10 : $numbers[1]; // naprawia błąd w przypadku kwoty 2.2 (jako 2 grosze, a nie 20)
+        }
 
         $output = "{$numberFormatter->format($zlotys)} {$this->selectWordVariety([self::ONE_ZLOTY, self::TWO_ZLOTYS, self::FIVE_ZLOTYS], $zlotys)}";
         $output .= $isComma ? ", " : " ";
