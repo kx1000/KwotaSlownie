@@ -1,4 +1,7 @@
-[![Latest Stable Version](https://poser.pugx.org/kx1000/kwota-slownie/v)](//packagist.org/packages/kx1000/kwota-slownie) [![License](https://poser.pugx.org/kx1000/kwota-slownie/license)](//packagist.org/packages/kx1000/kwota-slownie)
+[![Latest Stable Version](https://poser.pugx.org/kx1000/kwota-slownie/v)](//packagist.org/packages/kx1000/kwota-slownie) 
+[![License](https://poser.pugx.org/kx1000/kwota-slownie/license)](//packagist.org/packages/kx1000/kwota-slownie)
+[![Total Downloads](http://poser.pugx.org/kx1000/kwota-slownie/downloads)](https://packagist.org/packages/kx1000/kwota-slownie)
+[![Monthly Downloads](http://poser.pugx.org/kx1000/kwota-slownie/d/monthly)](https://packagist.org/packages/kx1000/kwota-slownie)
 
 # KwotaSlownie
 **Bilbioteka PHP służąca do przekształcania liczb zmiennoprzecinkowych na kwoty słownie wyrażone w polskich złotówkach.**
